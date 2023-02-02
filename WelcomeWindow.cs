@@ -6,5 +6,10 @@ namespace BookstoreApp
         {
             InitializeComponent();
         }
+
+        private void WelcomeWindow_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
