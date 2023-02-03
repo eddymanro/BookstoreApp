@@ -11,5 +11,10 @@ namespace BookstoreApp
         {
 
         }
+
+        private void WelcomeWindow_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
