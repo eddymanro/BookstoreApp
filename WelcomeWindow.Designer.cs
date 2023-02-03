@@ -69,6 +69,7 @@
             this.clientBtn.TabIndex = 2;
             this.clientBtn.Text = "Client";
             this.clientBtn.UseVisualStyleBackColor = false;
+            this.clientBtn.Click += new System.EventHandler(this.clientBtn_Click);
             // 
             // exitBtn
             // 

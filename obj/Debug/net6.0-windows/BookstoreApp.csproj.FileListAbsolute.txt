@@ -31,3 +31,4 @@ D:\Programming\VS_Workspace\BookstoreApp\bin\Debug\net6.0-windows\runtimes\osx\n
 D:\Programming\VS_Workspace\BookstoreApp\bin\Debug\net6.0-windows\runtimes\win\native\mongocrypt.dll
 D:\Programming\VS_Workspace\BookstoreApp\obj\Debug\net6.0-windows\BookstoreApp.csproj.CopyComplete
 D:\Programming\VS_Workspace\BookstoreApp\obj\Debug\net6.0-windows\BookstoreApp.BookstoreAdminWindow.resources
+D:\Programming\VS_Workspace\BookstoreApp\obj\Debug\net6.0-windows\BookstoreApp.ReservationWindow.resources

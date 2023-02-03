@@ -78,6 +78,7 @@
             this.dataGridV.RowTemplate.Height = 25;
             this.dataGridV.Size = new System.Drawing.Size(512, 463);
             this.dataGridV.TabIndex = 15;
+            this.dataGridV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridV_CellContentClick);
             // 
             // addBtn
             // 
@@ -116,6 +117,7 @@
             this.deleteBtn.TabIndex = 12;
             this.deleteBtn.Text = "Delete";
             this.deleteBtn.UseVisualStyleBackColor = false;
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
             // clearBtn
             // 

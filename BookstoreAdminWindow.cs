@@ -57,6 +57,11 @@ namespace BookstoreApp
             dataGridV.DataSource = localList;          
         }
 
+        public void removeData() 
+        {
+            //
+        }
+
         private void button4_Click(object sender, EventArgs e)
         {
             Program.clearList(Program.getBookStoresList());
@@ -83,6 +88,26 @@ namespace BookstoreApp
             }
 
             
+        }
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            
+            //int indexRow = e.RowIndex;
+            //DataGridViewRow row = dataGridV.Rows[indexRow];
+            //string idToDelete = row.Cells[0].Value.ToString();
+            //Console.WriteLine(idToDelete);
+
+            //string idToDelete = dataGridV.row;
+            //string idToDelete =  ;
+            //db.yourCollectionName.remove({ _id: yourObjectId});
+        }
+
+        private void dataGridV_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int indexRow = e.RowIndex;
+            DataGridViewRow row = dataGridV.Rows[indexRow];
+            usernameTextField.Text = row.Cells[0].Value.ToString();            
         }
     }
 }

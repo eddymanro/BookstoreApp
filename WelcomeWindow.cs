@@ -28,5 +28,11 @@ namespace BookstoreApp
         {
             this.Close();           
         }
+
+        private void clientBtn_Click(object sender, EventArgs e)
+        {
+            ReservationWindow rsrv = new ReservationWindow();
+            rsrv.Show();
+        }
     }
 }
