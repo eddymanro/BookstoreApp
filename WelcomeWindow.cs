@@ -16,5 +16,12 @@ namespace BookstoreApp
         {
 
         }
+
+        private void bookstoreBtn_Click(object sender, EventArgs e)
+        {
+            BookstoreAdminWindow badm = new BookstoreAdminWindow();
+            badm.Show();
+            this.Hide();
+        }
     }
 }

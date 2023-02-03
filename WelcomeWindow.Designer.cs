@@ -55,6 +55,7 @@
             this.bookstoreBtn.TabIndex = 1;
             this.bookstoreBtn.Text = "Bookstore Admin";
             this.bookstoreBtn.UseVisualStyleBackColor = false;
+            this.bookstoreBtn.Click += new System.EventHandler(this.bookstoreBtn_Click);
             // 
             // clientBtn
             // 

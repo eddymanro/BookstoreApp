@@ -30,3 +30,4 @@ D:\Programming\VS_Workspace\BookstoreApp\bin\Debug\net6.0-windows\runtimes\linux
 D:\Programming\VS_Workspace\BookstoreApp\bin\Debug\net6.0-windows\runtimes\osx\native\libmongocrypt.dylib
 D:\Programming\VS_Workspace\BookstoreApp\bin\Debug\net6.0-windows\runtimes\win\native\mongocrypt.dll
 D:\Programming\VS_Workspace\BookstoreApp\obj\Debug\net6.0-windows\BookstoreApp.csproj.CopyComplete
+D:\Programming\VS_Workspace\BookstoreApp\obj\Debug\net6.0-windows\BookstoreApp.BookstoreAdminWindow.resources
