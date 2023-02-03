@@ -46,32 +46,28 @@ namespace BookstoreApp
         {
             InitializeComponent();
             connection = new ConnectToDb();
-            Program.populateArraylist(connection.getBookstoreCollection(), Program.getBookStoresList());
-
-            readData();
+            fetchNewData();
         }
 
-        public void readData() 
-        {
+        public void fetchNewData() 
+        {            
+            Program.populateArraylist(connection.getBookstoreCollection(), Program.getBookStoresList());
             List<BookstoreModel> localList = Program.getBookStoresList();
             dataGridV.DataSource = localList;          
         }
 
         public void removeData() 
         {
-            //
+            Program.clearList(Program.getBookStoresList());            
+            dataGridV.DataSource = null;
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            Program.clearList(Program.getBookStoresList());
-            //WelcomeWindow wlc = new WelcomeWindow();
-            //wlc.Show();
-            //dataGridV.DataSource = null;           
+            removeData();               
             this.Close();
         }
-
-       
+               
         private void addBtn_Click(object sender, EventArgs e)
         {
             IMongoCollection<BookstoreModel>  bookstorecollection = this.connection.getBookstoreCollection();
@@ -82,9 +78,11 @@ namespace BookstoreApp
                                                             Password = passwordTextField.Text };
            
             if (verifyInputs()) 
-            {
+            {                
                 bookstorecollection.InsertOne(bookstore);
                 MessageBox.Show("Succesfull added new Bookstore information", "Success", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+                removeData();               
+                fetchNewData();             
             }
 
             
