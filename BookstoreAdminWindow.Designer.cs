@@ -29,18 +29,18 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.addBtn = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.deleteBtn = new System.Windows.Forms.Button();
+            this.clearBtn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.passwordTextField = new System.Windows.Forms.TextBox();
+            this.cityTextField = new System.Windows.Forms.TextBox();
+            this.nameTextField = new System.Windows.Forms.TextBox();
+            this.usernameTextField = new System.Windows.Forms.TextBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
@@ -49,23 +49,36 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.addBtn);
             this.panel1.Controls.Add(this.button4);
-            this.panel1.Controls.Add(this.button3);
-            this.panel1.Controls.Add(this.button2);
-            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.deleteBtn);
+            this.panel1.Controls.Add(this.clearBtn);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.textBox4);
-            this.panel1.Controls.Add(this.textBox3);
-            this.panel1.Controls.Add(this.textBox2);
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.Controls.Add(this.passwordTextField);
+            this.panel1.Controls.Add(this.cityTextField);
+            this.panel1.Controls.Add(this.nameTextField);
+            this.panel1.Controls.Add(this.usernameTextField);
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(0, 1);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(945, 542);
             this.panel1.TabIndex = 0;
+            // 
+            // addBtn
+            // 
+            this.addBtn.BackColor = System.Drawing.Color.DarkCyan;
+            this.addBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.addBtn.ForeColor = System.Drawing.Color.White;
+            this.addBtn.Location = new System.Drawing.Point(23, 268);
+            this.addBtn.Name = "addBtn";
+            this.addBtn.Size = new System.Drawing.Size(350, 51);
+            this.addBtn.TabIndex = 14;
+            this.addBtn.Text = "Add";
+            this.addBtn.UseVisualStyleBackColor = false;
+            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
             // button4
             // 
@@ -80,41 +93,29 @@
             this.button4.UseVisualStyleBackColor = false;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // button3
+            // deleteBtn
             // 
-            this.button3.BackColor = System.Drawing.Color.DarkCyan;
-            this.button3.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(23, 338);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(350, 51);
-            this.button3.TabIndex = 12;
-            this.button3.Text = "Delete";
-            this.button3.UseVisualStyleBackColor = false;
+            this.deleteBtn.BackColor = System.Drawing.Color.DarkCyan;
+            this.deleteBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.deleteBtn.ForeColor = System.Drawing.Color.White;
+            this.deleteBtn.Location = new System.Drawing.Point(23, 338);
+            this.deleteBtn.Name = "deleteBtn";
+            this.deleteBtn.Size = new System.Drawing.Size(350, 51);
+            this.deleteBtn.TabIndex = 12;
+            this.deleteBtn.Text = "Delete";
+            this.deleteBtn.UseVisualStyleBackColor = false;
             // 
-            // button2
+            // clearBtn
             // 
-            this.button2.BackColor = System.Drawing.Color.DarkCyan;
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(23, 409);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(350, 51);
-            this.button2.TabIndex = 11;
-            this.button2.Text = "Clear";
-            this.button2.UseVisualStyleBackColor = false;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.DarkCyan;
-            this.button1.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.button1.ForeColor = System.Drawing.Color.White;
-            this.button1.Location = new System.Drawing.Point(23, 270);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(350, 51);
-            this.button1.TabIndex = 10;
-            this.button1.Text = "Add";
-            this.button1.UseVisualStyleBackColor = false;
+            this.clearBtn.BackColor = System.Drawing.Color.DarkCyan;
+            this.clearBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.clearBtn.ForeColor = System.Drawing.Color.White;
+            this.clearBtn.Location = new System.Drawing.Point(23, 409);
+            this.clearBtn.Name = "clearBtn";
+            this.clearBtn.Size = new System.Drawing.Size(350, 51);
+            this.clearBtn.TabIndex = 11;
+            this.clearBtn.Text = "Clear";
+            this.clearBtn.UseVisualStyleBackColor = false;
             // 
             // label5
             // 
@@ -160,37 +161,37 @@
             this.label2.TabIndex = 5;
             this.label2.Text = "Username";
             // 
-            // textBox4
+            // passwordTextField
             // 
-            this.textBox4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox4.Location = new System.Drawing.Point(140, 217);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(233, 29);
-            this.textBox4.TabIndex = 4;
+            this.passwordTextField.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.passwordTextField.Location = new System.Drawing.Point(140, 217);
+            this.passwordTextField.Name = "passwordTextField";
+            this.passwordTextField.Size = new System.Drawing.Size(233, 29);
+            this.passwordTextField.TabIndex = 4;
             // 
-            // textBox3
+            // cityTextField
             // 
-            this.textBox3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox3.Location = new System.Drawing.Point(140, 163);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(233, 29);
-            this.textBox3.TabIndex = 3;
+            this.cityTextField.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.cityTextField.Location = new System.Drawing.Point(140, 163);
+            this.cityTextField.Name = "cityTextField";
+            this.cityTextField.Size = new System.Drawing.Size(233, 29);
+            this.cityTextField.TabIndex = 3;
             // 
-            // textBox2
+            // nameTextField
             // 
-            this.textBox2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox2.Location = new System.Drawing.Point(140, 114);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(233, 29);
-            this.textBox2.TabIndex = 2;
+            this.nameTextField.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.nameTextField.Location = new System.Drawing.Point(140, 114);
+            this.nameTextField.Name = "nameTextField";
+            this.nameTextField.Size = new System.Drawing.Size(233, 29);
+            this.nameTextField.TabIndex = 2;
             // 
-            // textBox1
+            // usernameTextField
             // 
-            this.textBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.textBox1.Location = new System.Drawing.Point(140, 63);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(233, 29);
-            this.textBox1.TabIndex = 1;
+            this.usernameTextField.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.usernameTextField.Location = new System.Drawing.Point(140, 63);
+            this.usernameTextField.Name = "usernameTextField";
+            this.usernameTextField.Size = new System.Drawing.Size(233, 29);
+            this.usernameTextField.TabIndex = 1;
             // 
             // panel2
             // 
@@ -233,17 +234,17 @@
         private Panel panel1;
         private Panel panel2;
         private Button button4;
-        private Button button3;
-        private Button button2;
-        private Button button1;
+        private Button deleteBtn;
+        private Button clearBtn;
         private Label label5;
         private Label label4;
         private Label label3;
         private Label label2;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
-        private TextBox textBox1;
+        private TextBox passwordTextField;
+        private TextBox cityTextField;
+        private TextBox nameTextField;
+        private TextBox usernameTextField;
         private Label label1;
+        private Button addBtn;
     }
 }
