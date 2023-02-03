@@ -31,6 +31,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.bookstoreBtn = new System.Windows.Forms.Button();
             this.clientBtn = new System.Windows.Forms.Button();
+            this.exitBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -69,11 +70,25 @@
             this.clientBtn.Text = "Client";
             this.clientBtn.UseVisualStyleBackColor = false;
             // 
+            // exitBtn
+            // 
+            this.exitBtn.BackColor = System.Drawing.Color.DarkCyan;
+            this.exitBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.exitBtn.ForeColor = System.Drawing.Color.White;
+            this.exitBtn.Location = new System.Drawing.Point(128, 322);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.Size = new System.Drawing.Size(340, 75);
+            this.exitBtn.TabIndex = 3;
+            this.exitBtn.Text = "Quit Application";
+            this.exitBtn.UseVisualStyleBackColor = false;
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
+            // 
             // WelcomeWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(604, 421);
+            this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.clientBtn);
             this.Controls.Add(this.bookstoreBtn);
             this.Controls.Add(this.label1);
@@ -90,5 +105,6 @@
         private Label label1;
         private Button bookstoreBtn;
         private Button clientBtn;
+        private Button exitBtn;
     }
 }

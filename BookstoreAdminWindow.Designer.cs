@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridV = new System.Windows.Forms.DataGridView();
             this.addBtn = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.deleteBtn = new System.Windows.Forms.Button();
@@ -44,11 +45,13 @@
             this.panel2 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridV)).BeginInit();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.dataGridV);
             this.panel1.Controls.Add(this.addBtn);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.deleteBtn);
@@ -66,6 +69,15 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(945, 542);
             this.panel1.TabIndex = 0;
+            // 
+            // dataGridV
+            // 
+            this.dataGridV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridV.Location = new System.Drawing.Point(419, 63);
+            this.dataGridV.Name = "dataGridV";
+            this.dataGridV.RowTemplate.Height = 25;
+            this.dataGridV.Size = new System.Drawing.Size(512, 463);
+            this.dataGridV.TabIndex = 15;
             // 
             // addBtn
             // 
@@ -223,6 +235,7 @@
             this.Text = "BookstoreAdminWindow";
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridV)).EndInit();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -246,5 +259,6 @@
         private TextBox usernameTextField;
         private Label label1;
         private Button addBtn;
+        private DataGridView dataGridV;
     }
 }

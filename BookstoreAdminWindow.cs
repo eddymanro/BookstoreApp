@@ -14,31 +14,75 @@ namespace BookstoreApp
     public partial class BookstoreAdminWindow : Form
     {
         private ConnectToDb connection;
+        private BookstoreModel bookstore;
+
+        public bool verifyInputs() 
+        {
+            bool flag = true;
+
+            if (bookstore.Username == "")
+            {
+                flag = false;
+                MessageBox.Show("Username can not be empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);                
+            } else if (bookstore.Name == "")
+            {
+                flag = false;
+                MessageBox.Show("Name can not be empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (bookstore.City == "")
+            {
+                flag = false;
+                MessageBox.Show("City can not be empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+            else if (bookstore.Password == "")
+            {
+                flag = false;
+                MessageBox.Show("Password can not be empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }          
+            return flag;
+        }
+
         public BookstoreAdminWindow()
         {
             InitializeComponent();
             connection = new ConnectToDb();
+            Program.populateArraylist(connection.getBookstoreCollection(), Program.getBookStoresList());
+
+            readData();
+        }
+
+        public void readData() 
+        {
+            List<BookstoreModel> localList = Program.getBookStoresList();
+            dataGridV.DataSource = localList;          
         }
 
         private void button4_Click(object sender, EventArgs e)
         {
-            WelcomeWindow wlc = new WelcomeWindow();
-            wlc.Show();
+            Program.clearList(Program.getBookStoresList());
+            //WelcomeWindow wlc = new WelcomeWindow();
+            //wlc.Show();
+            //dataGridV.DataSource = null;           
             this.Close();
         }
 
        
         private void addBtn_Click(object sender, EventArgs e)
         {
-
             IMongoCollection<BookstoreModel>  bookstorecollection = this.connection.getBookstoreCollection();
 
-            BookstoreModel bookstore = new BookstoreModel { Username = usernameTextField.Text, 
+            this.bookstore = new BookstoreModel { Username = usernameTextField.Text, 
                                                             Name = nameTextField.Text, 
                                                             City = cityTextField.Text, 
                                                             Password = passwordTextField.Text };
+           
+            if (verifyInputs()) 
+            {
+                bookstorecollection.InsertOne(bookstore);
+                MessageBox.Show("Succesfull added new Bookstore information", "Success", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
 
-            bookstorecollection.InsertOne(bookstore);
+            
         }
     }
 }

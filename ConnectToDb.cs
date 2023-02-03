@@ -29,9 +29,6 @@ namespace BookstoreApp
         public MongoClient getDbClient() { return this.dbClient; }
         public IMongoDatabase getDb() { return this.db; }
         public IMongoCollection<BookstoreModel> getBookstoreCollection() { return this.bookstoresCollection; }
-        public IMongoCollection<BookModel> getBooksCollection() { return this.booksCollection; }
-
-        // setter          
-        
+        public IMongoCollection<BookModel> getBooksCollection() { return this.booksCollection; }                     
     }
 }
