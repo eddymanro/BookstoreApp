@@ -9,10 +9,10 @@ using MongoDB.Bson.Serialization.Attributes;
 
 namespace BookstoreApp
 {
-   
+
     internal class BookstoreModel
-    {       
-        [BsonId]        
+    {
+        [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string Id { get; set; }
         [BsonElement("Username")]
@@ -25,7 +25,7 @@ namespace BookstoreApp
         public string Password { get; set; }
 
         // helper Methods
-        public void printBookstore() 
+        public void printBookstore()
         {
             Console.WriteLine("-----------------");
             Console.WriteLine("Object from class: " + this.ToString());
@@ -33,7 +33,7 @@ namespace BookstoreApp
             Console.WriteLine("Username: " + this.Username);
             Console.WriteLine("Name: " + this.Name);
             Console.WriteLine("City: " + this.City);
-            Console.WriteLine("Password: " + this.Password);            
+            Console.WriteLine("Password: " + this.Password);
         }
 
     }
