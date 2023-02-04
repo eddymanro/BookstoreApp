@@ -33,7 +33,7 @@
             this.addBtn = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.deleteBtn = new System.Windows.Forms.Button();
-            this.clearBtn = new System.Windows.Forms.Button();
+            this.saveBtn = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -55,7 +55,7 @@
             this.panel1.Controls.Add(this.addBtn);
             this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.deleteBtn);
-            this.panel1.Controls.Add(this.clearBtn);
+            this.panel1.Controls.Add(this.saveBtn);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
@@ -67,7 +67,7 @@
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Location = new System.Drawing.Point(0, 1);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(945, 542);
+            this.panel1.Size = new System.Drawing.Size(1001, 542);
             this.panel1.TabIndex = 0;
             // 
             // dataGridV
@@ -75,10 +75,11 @@
             this.dataGridV.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridV.Location = new System.Drawing.Point(419, 63);
             this.dataGridV.Name = "dataGridV";
+            this.dataGridV.RowHeadersVisible = false;
             this.dataGridV.RowTemplate.Height = 25;
-            this.dataGridV.Size = new System.Drawing.Size(512, 463);
+            this.dataGridV.Size = new System.Drawing.Size(564, 463);
             this.dataGridV.TabIndex = 15;
-            this.dataGridV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridV_CellContentClick);
+            this.dataGridV.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridV_CurrentRowChanging);
             // 
             // addBtn
             // 
@@ -119,17 +120,18 @@
             this.deleteBtn.UseVisualStyleBackColor = false;
             this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
-            // clearBtn
+            // saveBtn
             // 
-            this.clearBtn.BackColor = System.Drawing.Color.DarkCyan;
-            this.clearBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.clearBtn.ForeColor = System.Drawing.Color.White;
-            this.clearBtn.Location = new System.Drawing.Point(23, 409);
-            this.clearBtn.Name = "clearBtn";
-            this.clearBtn.Size = new System.Drawing.Size(350, 51);
-            this.clearBtn.TabIndex = 11;
-            this.clearBtn.Text = "Clear";
-            this.clearBtn.UseVisualStyleBackColor = false;
+            this.saveBtn.BackColor = System.Drawing.Color.DarkCyan;
+            this.saveBtn.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.saveBtn.ForeColor = System.Drawing.Color.White;
+            this.saveBtn.Location = new System.Drawing.Point(23, 409);
+            this.saveBtn.Name = "saveBtn";
+            this.saveBtn.Size = new System.Drawing.Size(350, 51);
+            this.saveBtn.TabIndex = 11;
+            this.saveBtn.Text = "Save";
+            this.saveBtn.UseVisualStyleBackColor = false;
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
             // 
             // label5
             // 
@@ -213,7 +215,7 @@
             this.panel2.Controls.Add(this.label1);
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(945, 49);
+            this.panel2.Size = new System.Drawing.Size(1005, 45);
             this.panel2.TabIndex = 0;
             // 
             // label1
@@ -221,7 +223,7 @@
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point);
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(312, 8);
+            this.label1.Location = new System.Drawing.Point(345, 8);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(283, 32);
             this.label1.TabIndex = 0;
@@ -231,7 +233,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(943, 539);
+            this.ClientSize = new System.Drawing.Size(1000, 543);
             this.Controls.Add(this.panel1);
             this.Name = "BookstoreAdminWindow";
             this.Text = "BookstoreAdminWindow";
@@ -250,7 +252,7 @@
         private Panel panel2;
         private Button button4;
         private Button deleteBtn;
-        private Button clearBtn;
+        private Button saveBtn;
         private Label label5;
         private Label label4;
         private Label label3;
