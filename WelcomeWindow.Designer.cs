@@ -32,6 +32,7 @@
             this.bookstoreBtn = new System.Windows.Forms.Button();
             this.clientBtn = new System.Windows.Forms.Button();
             this.exitBtn = new System.Windows.Forms.Button();
+            this.bookStoreLoginBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -54,7 +55,7 @@
             this.bookstoreBtn.Name = "bookstoreBtn";
             this.bookstoreBtn.Size = new System.Drawing.Size(340, 75);
             this.bookstoreBtn.TabIndex = 1;
-            this.bookstoreBtn.Text = "Bookstores Admin";
+            this.bookstoreBtn.Text = "Admin";
             this.bookstoreBtn.UseVisualStyleBackColor = false;
             this.bookstoreBtn.Click += new System.EventHandler(this.bookstoreBtn_Click);
             // 
@@ -63,11 +64,11 @@
             this.clientBtn.BackColor = System.Drawing.Color.DarkCyan;
             this.clientBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.clientBtn.ForeColor = System.Drawing.Color.White;
-            this.clientBtn.Location = new System.Drawing.Point(128, 218);
+            this.clientBtn.Location = new System.Drawing.Point(128, 273);
             this.clientBtn.Name = "clientBtn";
             this.clientBtn.Size = new System.Drawing.Size(340, 75);
             this.clientBtn.TabIndex = 2;
-            this.clientBtn.Text = "Client";
+            this.clientBtn.Text = "Book Reservations";
             this.clientBtn.UseVisualStyleBackColor = false;
             this.clientBtn.Click += new System.EventHandler(this.clientBtn_Click);
             // 
@@ -76,7 +77,7 @@
             this.exitBtn.BackColor = System.Drawing.Color.DarkCyan;
             this.exitBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
             this.exitBtn.ForeColor = System.Drawing.Color.White;
-            this.exitBtn.Location = new System.Drawing.Point(128, 322);
+            this.exitBtn.Location = new System.Drawing.Point(128, 354);
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.Size = new System.Drawing.Size(340, 75);
             this.exitBtn.TabIndex = 3;
@@ -84,11 +85,24 @@
             this.exitBtn.UseVisualStyleBackColor = false;
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
+            // bookStoreLoginBtn
+            // 
+            this.bookStoreLoginBtn.BackColor = System.Drawing.Color.DarkCyan;
+            this.bookStoreLoginBtn.Font = new System.Drawing.Font("Segoe UI", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.bookStoreLoginBtn.ForeColor = System.Drawing.Color.White;
+            this.bookStoreLoginBtn.Location = new System.Drawing.Point(128, 192);
+            this.bookStoreLoginBtn.Name = "bookStoreLoginBtn";
+            this.bookStoreLoginBtn.Size = new System.Drawing.Size(340, 75);
+            this.bookStoreLoginBtn.TabIndex = 4;
+            this.bookStoreLoginBtn.Text = "Bookstore Login";
+            this.bookStoreLoginBtn.UseVisualStyleBackColor = false;
+            // 
             // WelcomeWindow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(604, 421);
+            this.ClientSize = new System.Drawing.Size(579, 492);
+            this.Controls.Add(this.bookStoreLoginBtn);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.clientBtn);
             this.Controls.Add(this.bookstoreBtn);
@@ -107,5 +121,6 @@
         private Button bookstoreBtn;
         private Button clientBtn;
         private Button exitBtn;
+        private Button bookStoreLoginBtn;
     }
 }
