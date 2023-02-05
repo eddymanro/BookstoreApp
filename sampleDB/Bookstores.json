@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "63dc17afafc738635661f8ed"
+  },
+  "Username": "divert",
+  "Name": "Diverta",
+  "City": "Cluj-Napoca",
+  "Password": "0000"
+},{
+  "_id": {
+    "$oid": "63dc51a5afc738635661f8f7"
+  },
+  "Username": "cart",
+  "Name": "Carturesti",
+  "City": "Cluj-Napoca",
+  "Password": "0000"
+},{
+  "_id": {
+    "$oid": "63dd13363d77d4b188fe7aa3"
+  },
+  "Username": "human",
+  "Name": "Humanitas",
+  "City": "Bistrita Nasaud",
+  "Password": "0000"
+}]

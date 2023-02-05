@@ -4,6 +4,9 @@
     <Compile Update="BookstoreAdminWindow.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Update="BookstoreLoginWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ReservationWindow.cs">
       <SubType>Form</SubType>
     </Compile>

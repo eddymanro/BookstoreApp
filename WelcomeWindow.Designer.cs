@@ -54,7 +54,7 @@
             this.bookstoreBtn.Name = "bookstoreBtn";
             this.bookstoreBtn.Size = new System.Drawing.Size(340, 75);
             this.bookstoreBtn.TabIndex = 1;
-            this.bookstoreBtn.Text = "Bookstore Admin";
+            this.bookstoreBtn.Text = "Bookstores Admin";
             this.bookstoreBtn.UseVisualStyleBackColor = false;
             this.bookstoreBtn.Click += new System.EventHandler(this.bookstoreBtn_Click);
             // 

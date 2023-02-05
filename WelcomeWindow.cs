@@ -19,14 +19,13 @@ namespace BookstoreApp
 
         private void bookstoreBtn_Click(object sender, EventArgs e)
         {
-            BookstoreAdminWindow badm = new BookstoreAdminWindow();
-            badm.Show();
-            
+            BookstoreLoginWindow bloginwindow = new BookstoreLoginWindow();
+            bloginwindow.Show();
         }
 
         private void exitBtn_Click(object sender, EventArgs e)
         {
-            this.Close();           
+            this.Close();
         }
 
         private void clientBtn_Click(object sender, EventArgs e)
