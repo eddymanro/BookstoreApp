@@ -10,29 +10,18 @@ using System.Windows.Forms;
 
 namespace BookstoreApp
 {
-    public partial class BookstoreLoginWindow : Form
+    public partial class AdminLoginWindow : Form
     {
-        private ConnectToDb connection;
-        private BookstoreModel bookstore;
-        private string username;
-        private string password;
-        public BookstoreLoginWindow()
+        private const string ADMIN_USERNAME = "admin";
+        private const string ADMIN_PASSWORD = "pass";
+        public AdminLoginWindow()
         {
             InitializeComponent();
-            connection = new ConnectToDb();
-            getData();
         }
 
-        public void getData()
+        public bool verificationIsOk()
         {
-            Program.populateArraylist(connection.getBookstoreCollection(), Program.getBookStoresList());
-            List<BookstoreModel> localList = Program.getBookStoresList();
-           
-        }
-
-        public bool userVerificationOK() 
-        {
-            bool isVerified = false;
+            bool credentialsOK = false;
 
             if (usrTexfield.Text == "")
             {
@@ -46,9 +35,9 @@ namespace BookstoreApp
                 }
                 else
                 {
-                    if ((usrTexfield.Text == username) && (passTexField.Text == password))
+                    if ((usrTexfield.Text == ADMIN_USERNAME) && (passTexField.Text == ADMIN_PASSWORD))
                     {
-                        isVerified = true;
+                        credentialsOK = true;
                     }
                     else
                     {
@@ -59,22 +48,22 @@ namespace BookstoreApp
                 }
 
             }
-            return isVerified;
+            return credentialsOK;
+        }
+
+        private void loginBtn_Click(object sender, EventArgs e)
+        {
+            if (verificationIsOk())
+            {
+                BookstoreAdminWindow badm = new BookstoreAdminWindow();
+                this.Close();
+                badm.Show();
+            }
         }
 
         private void returnBtn_Click(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        private void loginBtn_Click(object sender, EventArgs e)
-        {
-            if (userVerificationOK())
-            {
-                BooksAdminWindow bookadmwnd = new BooksAdminWindow();
-                bookadmwnd.Show();
-                this.Close();
-            }
         }
     }
 }

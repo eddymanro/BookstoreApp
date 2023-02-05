@@ -19,8 +19,8 @@ namespace BookstoreApp
 
         private void bookstoreBtn_Click(object sender, EventArgs e)
         {
-            BookstoreLoginWindow bloginwindow = new BookstoreLoginWindow();
-            bloginwindow.Show();
+            AdminLoginWindow adm = new AdminLoginWindow();
+            adm.Show();
         }
 
         private void exitBtn_Click(object sender, EventArgs e)
@@ -32,6 +32,12 @@ namespace BookstoreApp
         {
             ReservationWindow rsrv = new ReservationWindow();
             rsrv.Show();
+        }
+
+        private void bookStoreLoginBtn_Click(object sender, EventArgs e)
+        {
+            BookstoreLoginWindow blw = new BookstoreLoginWindow();
+            blw.Show();
         }
     }
 }

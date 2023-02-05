@@ -33,3 +33,4 @@ D:\Programming\VS_Workspace\BookstoreApp\obj\Debug\net6.0-windows\BookstoreApp.c
 D:\Programming\VS_Workspace\BookstoreApp\obj\Debug\net6.0-windows\BookstoreApp.BookstoreAdminWindow.resources
 D:\Programming\VS_Workspace\BookstoreApp\obj\Debug\net6.0-windows\BookstoreApp.ReservationWindow.resources
 D:\Programming\VS_Workspace\BookstoreApp\obj\Debug\net6.0-windows\BookstoreApp.BookstoreLoginWindow.resources
+D:\Programming\VS_Workspace\BookstoreApp\obj\Debug\net6.0-windows\BookstoreApp.AdminLoginWindow.resources

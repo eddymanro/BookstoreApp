@@ -20,6 +20,13 @@ namespace BookstoreApp
         private BookstoreModel bookstore;
         private string idToDelete;
 
+        public BookstoreAdminWindow()
+        {
+            InitializeComponent();
+            connection = new ConnectToDb();
+            fetchNewData();
+        }
+
         public bool verifyInputs()
         {
             bool flag = true;
@@ -46,14 +53,7 @@ namespace BookstoreApp
             }
             return flag;
         }
-
-        public BookstoreAdminWindow()
-        {
-            InitializeComponent();
-            connection = new ConnectToDb();
-            fetchNewData();
-        }
-
+        
         public void fetchNewData()
         {
             Program.populateArraylist(connection.getBookstoreCollection(), Program.getBookStoresList());

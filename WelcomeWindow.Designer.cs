@@ -96,6 +96,7 @@
             this.bookStoreLoginBtn.TabIndex = 4;
             this.bookStoreLoginBtn.Text = "Bookstore Login";
             this.bookStoreLoginBtn.UseVisualStyleBackColor = false;
+            this.bookStoreLoginBtn.Click += new System.EventHandler(this.bookStoreLoginBtn_Click);
             // 
             // WelcomeWindow
             // 
