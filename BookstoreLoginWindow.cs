@@ -14,23 +14,14 @@ namespace BookstoreApp
     {
         private ConnectToDb connection;
         private BookstoreModel bookstore;
-        private string username;
-        private string password;
+
         public BookstoreLoginWindow()
         {
             InitializeComponent();
             connection = new ConnectToDb();
-            getData();
         }
 
-        public void getData()
-        {
-            Program.populateArraylist(connection.getBookstoreCollection(), Program.getBookStoresList());
-            List<BookstoreModel> localList = Program.getBookStoresList();
-           
-        }
-
-        public bool userVerificationOK() 
+        public bool userVerificationOK()
         {
             bool isVerified = false;
 
@@ -46,11 +37,23 @@ namespace BookstoreApp
                 }
                 else
                 {
-                    if ((usrTexfield.Text == username) && (passTexField.Text == password))
+                    // check every bookstore username password pair
+                    Program.populateArraylist(connection.getBookstoreCollection(), Program.getBookStoresList());
+                    List<BookstoreModel> bookstoresList = Program.getBookStoresList();
+
+                    foreach (BookstoreModel bookstore in bookstoresList)
                     {
-                        isVerified = true;
+                        if ((usrTexfield.Text == bookstore.Username) && (passTexField.Text == bookstore.Password))
+                        {
+                            isVerified = true;
+                            this.bookstore = bookstore;
+                            break;
+                        }
                     }
-                    else
+                    // clear the static list
+                    Program.clearList(Program.getBookStoresList());
+
+                    if (!isVerified)
                     {
                         MessageBox.Show("You have entered an invalid username / password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                         usrTexfield.Text = "";
@@ -70,8 +73,8 @@ namespace BookstoreApp
         private void loginBtn_Click(object sender, EventArgs e)
         {
             if (userVerificationOK())
-            {
-                BooksAdminWindow bookadmwnd = new BooksAdminWindow();
+            {               
+                BooksAdminWindow bookadmwnd = new BooksAdminWindow(this.bookstore.Name);
                 bookadmwnd.Show();
                 this.Close();
             }

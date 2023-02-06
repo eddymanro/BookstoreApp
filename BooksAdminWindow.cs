@@ -12,14 +12,22 @@ namespace BookstoreApp
 {
     public partial class BooksAdminWindow : Form
     {
-        public BooksAdminWindow()
+        private string bookstoreName;
+        public BooksAdminWindow(string bookstoreName)
         {
             InitializeComponent();
+            this.bookstoreName = bookstoreName;
+            this.labelTitle.Text = "Wellcome to " + bookstoreName + " bookstore!";
         }
 
         private void BooksAdminWindow_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void quitBtn_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
